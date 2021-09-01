@@ -1,10 +1,10 @@
-import './telaSelecionarFilme.css'
-import Poster from '../Assets/Poster.jpeg'
-import Filme from './Filme'
+import './telaSelecionarFilme.css';
+import Filme from './Filme';
+import React from 'react';
 
-const teste = [Poster, Poster, Poster, Poster, Poster, Poster]
+export default function TelaSelecionarFilme(props) {
+    const { posters } = props;
 
-export default function TelaSelecionarFilme() {
     return (
         <main className='tela-selecionar-filme'>
             <section className='instrucoes'>
@@ -12,7 +12,7 @@ export default function TelaSelecionarFilme() {
             </section>
 
             <section className='lista-posters'>
-                {teste.map((poster, index) => <Filme poster={poster} key={index} />)}
+                {posters.map((poster, index) => <Filme poster={poster} key={index} />)}
             </section>
         </main>
     )
