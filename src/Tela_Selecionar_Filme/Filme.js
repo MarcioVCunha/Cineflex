@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom";
+
 export default function Filme(props) {
-    const { poster, index } = props;
+    const { poster } = props;
 
     return (
-        <div onClick={() => {
-            console.log(poster.id)
-        }
-        } className='caixa-poster'>
-            <img className='poster' id={poster.id} src={poster.posterURL} alt='' key={index} />
-        </div>
+        <Link key={poster.id} to={`/Filme/${poster.id}`} >
+
+            <div className='caixa-poster'>
+                <img className='poster' src={poster.posterURL} alt='' />
+            </div>
+        </Link>
     )
 }

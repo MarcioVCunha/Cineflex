@@ -7,6 +7,7 @@ import './CSS/style.css';
 
 import Header from './Header/Header';
 import TelaSelecionarFilme from './Tela_Selecionar_Filme/TelaSelecionarFilme';
+import Sessoes from './Sessoes/Sessoes';
 
 function App() {
     return (
@@ -14,8 +15,12 @@ function App() {
             <Header />
 
             <Switch>
-                <Route path='/' exact>
+                <Route path='/' exact >
                     <TelaSelecionarFilme />
+                </Route>
+
+                <Route path='/Filme/:idFilme' exact>
+                    <Sessoes />
                 </Route>
             </Switch>
         </BrowserRouter >
