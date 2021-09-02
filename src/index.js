@@ -8,6 +8,7 @@ import './CSS/style.css';
 import Header from './Header/Header';
 import TelaSelecionarFilme from './Tela_Selecionar_Filme/TelaSelecionarFilme';
 import Sessoes from './Sessoes/Sessoes';
+import Seats from './Seats/Seats';
 
 function App() {
     return (
@@ -19,8 +20,12 @@ function App() {
                     <TelaSelecionarFilme />
                 </Route>
 
-                <Route path='/Filme/:idFilme' exact>
+                <Route path='/filme/:idFilme' exact>
                     <Sessoes />
+                </Route>
+
+                <Route path='/sessao/:idSessao' exact>
+                    <Seats />
                 </Route>
             </Switch>
         </BrowserRouter >

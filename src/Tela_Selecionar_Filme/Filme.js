@@ -4,7 +4,7 @@ export default function Filme(props) {
     const { poster } = props;
 
     return (
-        <Link key={poster.id} to={`/Filme/${poster.id}`} >
+        <Link key={poster.id} to={`/filme/${poster.id}`} >
 
             <div className='caixa-poster'>
                 <img className='poster' src={poster.posterURL} alt='' />
