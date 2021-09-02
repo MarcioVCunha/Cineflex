@@ -1,10 +1,9 @@
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import "./Sessoes.css";
 import "../CSS/style.css"
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function Sessoes() {
     const params = useParams();

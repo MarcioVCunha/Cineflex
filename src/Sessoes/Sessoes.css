@@ -1,21 +1,20 @@
-.tela-sessoes{
-    margin: 67px auto 0 auto;
+.tela-sessoes {
+    margin: 67px auto;
     width: 90%;
 }
 
-.dia-sessão{
-    font-family: 'Roboto', sans-serif;
+.dia-sessão {
     font-size: 24px;
     margin: 20px 0;
 }
 
-.horario-sessao{
+.horario-sessao {
     width: 82px;
     height: 43px;
     background-color: rgb(232, 131, 58);
     color: white;
-    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     margin-right: 5px;
     border: none;
+    cursor: pointer;
 }
