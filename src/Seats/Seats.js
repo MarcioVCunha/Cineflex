@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 import './seats.css'
@@ -8,6 +8,7 @@ import '../CSS/style.css'
 import Legenda from './Legenda'
 import Buttons from './Buttons'
 import Inputs from './Inputs'
+import FinalizeRequest from './FinalizeRequest'
 
 export default function Seats(props) {
     const params = useParams();
@@ -31,12 +32,7 @@ export default function Seats(props) {
             <Buttons seats={seats} infCompra={infCompra} />
             <Legenda />
             <Inputs infCompra={infCompra} />
-
-            <Link to='/sucesso'>
-                <button className='finalizar'>
-                    Reservar assento(s)
-                </button>
-            </Link>
+            <FinalizeRequest infCompra={infCompra} />
         </main>
     )
 }

@@ -9,12 +9,12 @@ export default function Inputs(props) {
 
     function salvarString(tipo, event) {
         if (tipo === 'cpf' && isTrueCPF(event)) {
-            infCompra.infComprador.cpf = event.target.value;
+            infCompra.objetoPost.cpf = event.target.value;
             infCompra.condicoes.cpf = true;
         }
 
         if (tipo === 'nome') {
-            infCompra.infComprador.nome = event.target.value;
+            infCompra.objetoPost.nome = event.target.value;
             if(event.target.value === ''){
                 infCompra.condicoes.nome = false;
             } else {
@@ -22,7 +22,6 @@ export default function Inputs(props) {
             }   
         }
     }
-
 
     return (
         <>

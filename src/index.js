@@ -12,8 +12,8 @@ import Seats from './Seats/Seats';
 
 function App() {
     const infCompra = {
-        assentos: [],
-        infComprador: {
+        objetoPost: {
+            id: [],
             nome: '',
             cpf: '',
         },
@@ -39,6 +39,10 @@ function App() {
 
                 <Route path='/sessao/:idSessao' exact>
                     <Seats infCompra={infCompra} />
+                </Route>
+
+                <Route path='/sucesso' exact>
+                    
                 </Route>
             </Switch>
         </BrowserRouter >
