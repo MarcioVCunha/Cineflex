@@ -18,7 +18,7 @@ function App() {
             cpf: '',
         },
         condicoes: {
-            assetos: false,
+            assentos: false,
             nome: false,
             cpf: false
         }

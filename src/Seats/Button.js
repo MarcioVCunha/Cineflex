@@ -20,6 +20,12 @@ export default function Button(props) {
             default:
                 break;
         }
+
+        if(infCompra.assentos.length !== 0){
+            infCompra.condicoes.assentos = true;
+        } else {
+            infCompra.condicoes.assentos = false;
+        }
     }
 
     return (

@@ -32,9 +32,11 @@ export default function Seats(props) {
             <Legenda />
             <Inputs infCompra={infCompra} />
 
-            <button className='finalizar'>
-                Reservar assento(s)
-            </button>
+            <Link to='/sucesso'>
+                <button className='finalizar'>
+                    Reservar assento(s)
+                </button>
+            </Link>
         </main>
     )
 }

@@ -10,11 +10,16 @@ export default function Inputs(props) {
     function salvarString(tipo, event) {
         if (tipo === 'cpf' && isTrueCPF(event)) {
             infCompra.infComprador.cpf = event.target.value;
-            console.log(infCompra)
+            infCompra.condicoes.cpf = true;
         }
 
         if (tipo === 'nome') {
             infCompra.infComprador.nome = event.target.value;
+            if(event.target.value === ''){
+                infCompra.condicoes.nome = false;
+            } else {
+                infCompra.condicoes.nome = true;
+            }   
         }
     }
 
