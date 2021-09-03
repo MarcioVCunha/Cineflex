@@ -11,6 +11,19 @@ import Sessoes from './Sessoes/Sessoes';
 import Seats from './Seats/Seats';
 
 function App() {
+    const infCompra = {
+        assentos: [],
+        infComprador: {
+            nome: '',
+            cpf: '',
+        },
+        condicoes: {
+            assetos: false,
+            nome: false,
+            cpf: false
+        }
+    };
+
     return (
         <BrowserRouter>
             <Header />
@@ -25,7 +38,7 @@ function App() {
                 </Route>
 
                 <Route path='/sessao/:idSessao' exact>
-                    <Seats />
+                    <Seats infCompra={infCompra} />
                 </Route>
             </Switch>
         </BrowserRouter >

@@ -35,7 +35,7 @@
     grid-template-columns: auto auto auto;
 }
 
-.button-legend{
+.button-subtitle{
     font-size: 13px;
     display:flex;
     flex-direction: column;
