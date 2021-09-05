@@ -5,10 +5,11 @@ import { useEffect, useState } from "react";
 import "./Sessoes.css";
 import "../CSS/style.css"
 
+import FooterSessoes from "./FooterSessoes";
+
 export default function Sessoes() {
     const params = useParams();
     const id = params.idFilme;
-
     const [sessoes, setSessao] = useState({ days: [] });
 
     useEffect(() => {
@@ -24,14 +25,12 @@ export default function Sessoes() {
             <p className='instrucoes'>
                 Selecione o horário.
             </p>
-
             {sessoes.days.map((sessao) => {
                 return (
                     <>
                         <p className='dia-sessão'>
                             {`${sessao.weekday} - ${sessao.date}`}
                         </p>
-
                         {sessao.showtimes.map((horario, index) => {
                             return (
                                 <Link key={index} to={`/sessao/${horario.id}`}>
@@ -42,6 +41,8 @@ export default function Sessoes() {
                     </>
                 )
             })}
+
+            <FooterSessoes movie={sessoes} />
         </main>
     )
 }

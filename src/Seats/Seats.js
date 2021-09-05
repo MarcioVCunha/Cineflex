@@ -9,12 +9,12 @@ import Legenda from './Legenda'
 import Buttons from './Buttons'
 import Inputs from './Inputs'
 import FinalizeRequest from './FinalizeRequest'
+import FooterSeats from './FooterSeats'
 
 export default function Seats(props) {
     const params = useParams();
     const id = params.idSessao;
     const { infCompra } = props;
-
     const [seats, setSeats] = useState({ seats: [] });
 
     useEffect(() => {
@@ -28,11 +28,11 @@ export default function Seats(props) {
     return (
         <main className='tela-assentos' >
             <p className='instrucoes'>Selecione o(s) assento(s)</p>
-
             <Buttons seats={seats} infCompra={infCompra} />
             <Legenda />
             <Inputs infCompra={infCompra} />
             <FinalizeRequest infCompra={infCompra} />
+            <FooterSeats seats={seats} />
         </main>
     )
 }

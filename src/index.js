@@ -27,7 +27,6 @@ function App() {
     return (
         <BrowserRouter>
             <Header />
-
             <Switch>
                 <Route path='/' exact >
                     <TelaSelecionarFilme />
@@ -42,7 +41,6 @@ function App() {
                 </Route>
 
                 <Route path='/sucesso' exact>
-                    
                 </Route>
             </Switch>
         </BrowserRouter >

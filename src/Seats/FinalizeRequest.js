@@ -9,12 +9,10 @@ export default function FinalizeRequest(props) {
             alert('Por favor, selecione os assentos');
             event.preventDefault();
         }
-
         if (!condicoes.nome) {
             alert('Por favor, informe seu nome');
             event.preventDefault();
         }
-
         if (!condicoes.cpf) {
             alert('Por favor, informe o cpf com pontos e traço (111.111.111-11)')
             event.preventDefault();

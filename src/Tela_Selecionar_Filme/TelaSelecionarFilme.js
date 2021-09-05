@@ -9,7 +9,6 @@ export default function TelaSelecionarFilme() {
 
     useEffect(() => {
         const promisse = axios.get('https://mock-api.bootcamp.respondeai.com.br/api/v3/cineflex/movies');
-
         promisse.then((answear) => {
             setPosters(answear.data);
         });
@@ -20,7 +19,6 @@ export default function TelaSelecionarFilme() {
             <p className='instrucoes'>
                 Selecione o filme.
             </p>
-
             <section className='lista-posters'>
                 {posters.map((poster, index) => {
                     return (

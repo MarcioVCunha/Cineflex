@@ -20,7 +20,6 @@ export default function Button(props) {
             default:
                 break;
         }
-
         if(infCompra.objetoPost.id.length !== 0){
             infCompra.condicoes.assentos = true;
         } else {
