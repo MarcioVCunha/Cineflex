@@ -10,28 +10,28 @@ export default function Success(props) {
         props.infCompra.objetoPost.cpf.replace('.', '');
         props.infCompra.objetoPost.cpf.replace('-', '');
 
-        axios.post('https://mock-api.bootcamp.respondeai.com.br/api/v3/cineflex/seats/book-many', props.infCompra.objetoPost);
+        const requisicao = axios.post('https://mock-api.bootcamp.respondeai.com.br/api/v3/cineflex/seats/book-many', props.infCompra.objetoPost);
 
-        console.log(props.infCompra.objetoPost);
+        requisicao.then(() => {
+            props.infCompra.objetoPost = {
+                ids: [],
+                name: '',
+                cpf: ''
+            }
 
-        props.infCompra.objetoPost = {
-            ids: [],
-            name: '',
-            cpf: ''
-        }
-
-        props.infCompra.condicoes = {
-            assentos: false,
-            name: false,
-            cpf: false
-        }
+            props.infCompra.condicoes = {
+                assentos: false,
+                name: false,
+                cpf: false
+            }
 
 
-        props.infCompra.movie = {
-            name: '',
-            date: '',
-            time: ''
-        }
+            props.infCompra.movie = {
+                name: '',
+                date: '',
+                time: ''
+            }
+        });
     };
 
     return (
@@ -46,9 +46,9 @@ export default function Success(props) {
 
             <section className='inf-movie'>
                 <p className='title'>Ingressos</p>
-                {objetoPost.ids.map((seat) => {
+                {objetoPost.ids.map((seat, index) => {
                     return (
-                        <p className='informations'> {`Assento: ${seat}`}</p>
+                        <p className='informations' key={index}> {`Assento: ${seat}`}</p>
                     )
                 })}
             </section>

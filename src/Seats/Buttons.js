@@ -7,7 +7,7 @@ export default function Buttons(props) {
         <div className='buttons' >
             {seats.seats.map((seat, index) => {
                 return (
-                    <Button seat={seat} infCompra={infCompra} />
+                    <Button seat={seat} infCompra={infCompra} key={index} />
                 )
             })}
         </div>

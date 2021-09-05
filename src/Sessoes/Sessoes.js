@@ -25,9 +25,9 @@ export default function Sessoes() {
             <p className='instrucoes'>
                 Selecione o horário.
             </p>
-            {sessoes.days.map((sessao) => {
+            {sessoes.days.map((sessao, index) => {
                 return (
-                    <>
+                    <div key={index}>
                         <p className='dia-sessão'>
                             {`${sessao.weekday} - ${sessao.date}`}
                         </p>
@@ -38,7 +38,7 @@ export default function Sessoes() {
                                 </Link>
                             )
                         })}
-                    </>
+                    </div>
                 )
             })}
 
