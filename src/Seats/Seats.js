@@ -32,7 +32,7 @@ export default function Seats(props) {
             <Legenda />
             <Inputs infCompra={infCompra} />
             <FinalizeRequest infCompra={infCompra} />
-            <FooterSeats seats={seats} />
+            <FooterSeats infCompra={infCompra} seats={seats} />
         </main>
     )
 }

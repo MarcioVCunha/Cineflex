@@ -2,9 +2,14 @@ import '../CSS/footer.css'
 
 export default function FooterSeats(props) {
     if (props.seats.movie !== undefined) {
-        const { name, day, movie } = props.seats;
-        const { weekday } = day;
+        const { infCompra, seats } = props;
+        const { name, day, movie } = seats;
+        const { weekday, date } = day;
         const { title, posterURL } = movie;
+
+        infCompra.movie.name = title;
+        infCompra.movie.date = date;
+        infCompra.movie.time = name;
 
         return (
             <footer>

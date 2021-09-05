@@ -3,7 +3,7 @@
     width: 90%;
 }
 
-.buttons{
+.buttons {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
     row-gap: 10px;
@@ -24,30 +24,30 @@
     border: solid 1px rgb(26, 174, 158)
 }
 
-.ocupado{
+.ocupado {
     background-color: rgb(251, 225, 146);
     border: solid 1px rgb(247, 197, 43);
 }
 
-.legenda{
+.legenda {
     margin: 10px 0 30px 0;
     display: grid;
     grid-template-columns: auto auto auto;
 }
 
-.button-subtitle{
+.button-subtitle {
     font-size: 13px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.texto-input{
+.texto-input {
     font-size: 18px;
     margin: 30px 0 5px 0;
 }
 
-input{
+input {
     height: 51px;
     width: 100%;
     padding: 10px;

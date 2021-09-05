@@ -8,11 +8,11 @@ export default function Button(props) {
         switch (style) {
             case 'assento':
                 setStyle('assento selecionado');
-                infCompra.objetoPost.id.push(seat.name);
+                infCompra.objetoPost.ids.push(seat.name);
                 break;
             case ('assento selecionado'):
                 setStyle('assento');
-                infCompra.objetoPost.id.splice(infCompra.objetoPost.id.indexOf(seat.name), 1)
+                infCompra.objetoPost.ids.splice(infCompra.objetoPost.ids.indexOf(seat.name), 1)
                 break;
             case ('assento ocupado'):
                 alert('Esse assento não está disponível');
@@ -20,7 +20,7 @@ export default function Button(props) {
             default:
                 break;
         }
-        if(infCompra.objetoPost.id.length !== 0){
+        if (infCompra.objetoPost.ids.length !== 0) {
             infCompra.condicoes.assentos = true;
         } else {
             infCompra.condicoes.assentos = false;

@@ -9,7 +9,7 @@ export default function FinalizeRequest(props) {
             alert('Por favor, selecione os assentos');
             event.preventDefault();
         }
-        if (!condicoes.nome) {
+        if (!condicoes.name) {
             alert('Por favor, informe seu nome');
             event.preventDefault();
         }

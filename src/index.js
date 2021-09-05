@@ -9,18 +9,24 @@ import Header from './Header/Header';
 import TelaSelecionarFilme from './Tela_Selecionar_Filme/TelaSelecionarFilme';
 import Sessoes from './Sessoes/Sessoes';
 import Seats from './Seats/Seats';
+import Success from './Success/Success';
 
 function App() {
     const infCompra = {
         objetoPost: {
-            id: [],
-            nome: '',
-            cpf: '',
+            ids: [],
+            name: '',
+            cpf: ''
         },
         condicoes: {
             assentos: false,
-            nome: false,
+            name: false,
             cpf: false
+        },
+        movie: {
+            name: '',
+            date: '',
+            time: ''
         }
     };
 
@@ -41,6 +47,7 @@ function App() {
                 </Route>
 
                 <Route path='/sucesso' exact>
+                    <Success infCompra={infCompra} />
                 </Route>
             </Switch>
         </BrowserRouter >

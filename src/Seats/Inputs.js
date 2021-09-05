@@ -14,12 +14,12 @@ export default function Inputs(props) {
         }
 
         if (tipo === 'nome') {
-            infCompra.objetoPost.nome = event.target.value;
-            if(event.target.value === ''){
-                infCompra.condicoes.nome = false;
+            infCompra.objetoPost.name = event.target.value;
+            if (event.target.value === '') {
+                infCompra.condicoes.name = false;
             } else {
-                infCompra.condicoes.nome = true;
-            }   
+                infCompra.condicoes.name = true;
+            }
         }
     }
 
