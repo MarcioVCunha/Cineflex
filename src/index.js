@@ -26,7 +26,8 @@ function App() {
         movie: {
             name: '',
             date: '',
-            time: ''
+            time: '',
+            seats: []
         }
     };
 

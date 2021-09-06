@@ -29,7 +29,8 @@ export default function Success(props) {
             props.infCompra.movie = {
                 name: '',
                 date: '',
-                time: ''
+                time: '',
+                seats: []
             }
         });
     };
@@ -46,7 +47,7 @@ export default function Success(props) {
 
             <section className='inf-movie'>
                 <p className='title'>Ingressos</p>
-                {objetoPost.ids.map((seat, index) => {
+                {movie.seats.map((seat, index) => {
                     return (
                         <p className='informations' key={index}> {`Assento: ${seat}`}</p>
                     )

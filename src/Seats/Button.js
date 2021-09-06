@@ -8,11 +8,13 @@ export default function Button(props) {
         switch (style) {
             case 'assento':
                 setStyle('assento selecionado');
-                infCompra.objetoPost.ids.push(seat.name);
+                infCompra.objetoPost.ids.push(seat.id);
+                infCompra.movie.seats.push(seat.name);
                 break;
             case ('assento selecionado'):
                 setStyle('assento');
-                infCompra.objetoPost.ids.splice(infCompra.objetoPost.ids.indexOf(seat.name), 1)
+                infCompra.objetoPost.ids.splice(infCompra.objetoPost.ids.indexOf(seat.id), 1)
+                infCompra.movie.seats.splice(infCompra.movie.seats.indexOf(seat.name), 1)
                 break;
             case ('assento ocupado'):
                 alert('Esse assento não está disponível');
